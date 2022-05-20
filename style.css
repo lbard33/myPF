@@ -1,0 +1,226 @@
+/* ############## 초기값 설정 ############## */
+	*{margin:0;padding:0;/*font-family: 'Roboto Condensed', sans-serif;*/}
+	li{list-style-type:none;}
+	a:visited, a:link{text-decoration:none;color:#fff;}
+	a:hover, a:focus{color:#fff;}
+	img{border:none;}
+	header,content,visual,nav,aside,address,footer{display:block;}
+	/*
+		메인컬러 1 보라 : rgba(140,25,171,1)
+		메인컬러 2 녹색 : rgba(212,255,3,1)
+	*/
+
+/* ########### wrap ############ */
+	#wrap{width:100%;height:100%;position:relative;}
+	/*------- 전체 적용값 설정 -------------------*/
+		.lightblue{color:#77f;}
+		.lightred{color:#f77;}
+		.gray{color:#aaa;}
+		.bold{font-weight:900;}
+		.pb20{padding-bottom:20px;}
+		.wid65{width:65%;}
+		.wid30{width:30%;}
+		.marginL30{margin-left:30px;}
+		.fontB{font-weight:900;}
+		.aribic{font-family: 'Abril Fatface', cursive;}
+	/*------ 버리는 영역(숨기는 영역) ------------*/
+		h3{position:absolute; left:-9999px; display:block;
+			width:1px; height:1px; line-height:1px; font-size:1px; overflow:hidden;}
+/* ############ heaer ###########*/
+	#header{width:100%;height:100px;background-color:#000;position:fixed;top:0;left:0;z-index:999;}
+	#headerInner{width:1100px;height:70px;padding:0 50px;color:#fff;
+		position:absolute;top:15px;left:50%;transform:translatex(-50%);
+		text-transform:uppercase;line-height:70px;z-index:999;}
+	/*----------- header ----------*/
+		h1{float:left;}
+		h1 a{color:#fff;text-shadow:0 0 5px rgba(140,25,171,1),0 0 30px rgba(140,25,171,1),0 0 50px rgba(140,25,171,1);}
+		#gnb{width:40%;float:right;}
+		#gnb ul{display:flex;justify-content:space-between;}
+		#gnb ul li{background-color:rgba(0,0,0,0);}
+		#gnb ul li a:hover{text-shadow:0 0 5px rgba(212,255,3,1),0 0 10px rgba(212,255,3,1),0 0 30px rgba(212,255,3,1);}
+	/*--------- 메뉴 선택 효과 -------*/
+		.menuSct{font-weight:900;text-decoration:underline 10px;}
+		.menuSct a{color:rgb(212,255,3);}
+/* ############ container ###########*/
+	#container{width:100%;position:relative;}
+	/*------------ main visual -------------*/
+		#visual{width:100%;height:100vh;
+			background-image:url("pic/main1.jpg");background-size:100% 100%;display:block;}
+		/*+++++++ intro ++++++++*/
+			#intro{background-color:rgba(0,0,0,1);width:100%;height:100%;z-index:999;
+				display:block;animation:introback 5s;}
+			#intro .welAni{width:500px;height:200px;line-height:200px;
+				font-size:101px;color:rgba(255,255,255,1);font-weight:900;letter-spacing:10px;
+				cursor:default;animation:intro1 5s;
+				position:absolute;top:535px;right:43%;text-align:center;transform:perspective(0) rotatey(0) translatex(50%);}
+			.modalDesc{width:100%;height:130px;margin-top:70px;
+				text-align:center;line-height:30px;font-size:18px;color:#fff;
+				position:absolute;top:800px;left:50%;transform:translatex(-50%);animation:discover 3s;opacity:0;}
+		/*++++++ welcome ++++++*/
+			.wel{width:500px;height:200px;line-height:200px;
+				font-size:100px;color:rgb(255,255,255);
+				text-transform:uppercase;font-weight:900;letter-spacing:10px;text-indent:1px;
+				background-color:rgba(0,0,0,0);cursor:default;animation:intro2 5s;text-shadow:0 -2px 0 rgba(212,255,3,1);
+				position:absolute;top:535px;right:43%;text-align:center;transform:perspective(50px) rotatey(5deg);}
+			.wel .welBar{width:100%;height:2px;background-color:rgba(255,255,255,0.5);
+				animation:welbar 1s alternate infinite;}
+		/*++++++ dia 도형잡기 ++++++*/
+			.dia{width:350px;height:350px;padding:20px;position:absolute;top:450px;left:50%;}
+			.dia p{width:100%;height:100%;border:2px solid #fff;}
+			.dia0 p{width:100%;height:100%;border:2px solid #000;}
+			.dia0{animation:spindia1 3s 0s infinite;transform:rotate3d(0,0,1,45deg) translate(200px,-200px);
+				background-color:rgba(0,0,0,0.3);}
+			.dia1{transform:rotatey(90deg);animation:spindia2 3s 0s infinite;
+				transform:rotate3d(0,0,1,-45deg) translate(200px,200px);background-color:rgba(0,0,0,0.7);}
+		/*++++++  소개 *++++++*/
+			.mySelf{position:absolute;top:550px;left:50%;color:#fff;font-size:25px;
+				transform:translatex(330px);z-index:2;text-align:center;}
+			.mySelf .hr0{width:30px;height:3px;background-color:#fff;margin:50px auto;}
+	/*------------- aboutMe ----------------*/
+		#aboutMe{width:100%;height:800px;position:relative;display:block;outline:3px solid rgba(140,25,171);
+			background-image:url("pic/back7.png");background-size:cover;background-attachment:fixed;}
+		.aboutDesc{width:100%;height:790px;position:absolute;left:50%;top:50%;
+			transform:translate(-50%,-50%);}
+		.aboutInner{width:1200px;height:100%;margin:0 auto;}
+		.aboutInner h4{margin-top:40px;text-align:center;color:rgb(212,255,3);
+			font-size:40px;font-weight:900;letter-spacing:2px;text-shadow:0px 1px 3px #000;}
+		/*++++++++ basicMe +++++*/	
+			.basicMe{width:100%;height:500px;margin-top:40px;display:flex;justify-content:space-between;}
+			.basicMe a{color:#777;transition:all 0.3s linear;}
+			.aboutLayer{width:350px;height:450px;margin-top:40px;background-color:rgba(255,255,255,1);
+				border:3px solid #777;border-radius:50px;position:relative;color:#777;
+				transition:all 0.3s linear;}
+			.aboutLayer h5{margin-top:50px;text-align:center;font-size:22px;cursor:default;}
+			.icoC{width:70px;height:70px;border-radius:40px;border:3px solid #777;
+				background-color:#fff;position:absolute;top:-35px;left:50%;
+				transform:translatex(-50%);transition:border 0.3s linear;}
+			.aboutTitleIco{width:100%;transform:scale(0.6);}
+			.icoC1{transform:translate(4px,-1px) scale(0.8);}
+			.icoC2{transform:translate(-2px,0) scale(0.7);}
+			/*//////////// codeL /////////////*/
+				.codeL{cursor:default;text-align:center;}
+				.codeL h5{padding-bottom:50px;}
+				.codeLdiv{width:100%;padding-bottom:5px;}
+				.codeL .inblock{float:left;text-align:left;padding-bottom:20px;}
+				.codeL .wid30{text-indent:30px;}
+			/*//////////// meL /////////////*/
+				.meL{cursor:default;text-align:center;}
+				.meL div{padding-top:50px;}
+				.meL div b{padding:5px 0;display:inline-block;}
+				.likes{width:90%;margin:30px auto 0;
+					border:1px solid #ccc;border-radius:20px;
+					padding-bottom:15px;background-color:rgba(0,0,0,0.1);}
+				.dislikes{width:90%;margin:20px auto 0;
+					border:1px solid #ccc;border-radius:20px;
+					padding-bottom:15px;background-color:rgba(0,0,0,0.1);}
+			/*//////////// snsL /////////////*/
+				.snsL{font-weight:900;padding-top:50px;}
+				.snsL li{padding-bottom:20px;}
+				.snsL span{font-weight:400;}
+				.snsL img{height:30px;vertical-align:middle;margin:0 50px 3px;display:inline-block;text-align:left;}
+				.cursorD{cursor:default;}
+			/*////////// hover 기능 ////////////*/
+				.aboutLayer:hover{border:3px solid #D875FF;box-shadow:5px 5px 10px #6af;color:#000 !important;}
+				.aboutLayer:hover .icoC{border:3px solid #D875FF;}
+				.aboutLayer:hover a{color:#000;}
+				.codeL:hover .colPI{color:#c7c;}
+				.codeL:hover .colLB{color:#55c;}
+				.snsL a:hover{color:#D875FF;}
+				.meL:hover .likes{background-color:rgba(216,117,255,0.1);}
+				.meL:hover .likes b{color:#D875FF;}
+				.meL:hover .dislikes{background-color:rgba(102,170,255,0.1);}
+				.meL:hover .dislikes b{color:#6af;}
+	/*------------ skills --------------------*/
+		#skills{width:100%;height:800px;background-color:#000;display:block;}
+		/*+++++++ skillsPart ++++++++*/
+			.skillsPart{width:100%;height:200px;padding-top:100px;background-color:#000;position:relative;z-index:3;}
+			.skillsPart ul{width:1100px;padding:0 50px;margin:0 auto;display:flex;justify-content:center;}
+			.skillsPart ul li{height:100px;text-align:center;margin:0 30px;color:#fff;}
+			.skillsPart ul li p:first-child{height:100%;padding-bottom:20px;}
+			.skillsPart ul li p{cursor:default;}
+			.skillsPart ul li .skTit{padding-top:2px;font-weight:900;color:rgba(212,255,3,1);font-size:18px;}
+			.skillsPart ul li img{height:100%;}
+		/*+++++++ skillDesc ++++++++*/
+			.skillDesc{width:900px;height:240px;margin:50px auto;}
+			.skillDesc li{width:100%;height:35px;margin-bottom:5px;}
+			.skillDesc li p{float:left;height:100%;}
+			.skillDesc li .skd1{width:150px;line-height:35px;text-align:center;font-weight:900;
+			color:#fff;background-color:rgb(140,25,171,1);}
+			.skillDesc li .skd2{width:738px;height:33px;display:flex;justify-content:left;
+			line-height:33px;border:1px solid #ccc;margin-left:10px;color:#ccc;text-indent:30px;}
+	/*------------worklist------------*/	
+		#worklist{width:100%;height:1100px;background-color:rgb(22,0,55);display:block;overflow:hidden;position:relative;}
+		#worklist .workTitle p{text-align:center;margin-top:20px;
+		font-size:14px;cursor:default;background-color:rgba(0,0,0,0.5);color:#fff;}
+		#worklist h4{color:#fff;text-align:center;padding-top:50px;font-size:50px;font-weight:400;cursor:default;}
+		#worklist .workTitle b{font-size:16px;color: rgba(212,255,3,1);}
+		#worklist .workTitle p{width:500px;margin:30px auto 0;padding:20px 0;border:1px solid #000;}
+		/*+++++arSct+++++*/
+			.arSct{width:100%;position:relative;}
+			.arSct p{width:250px;	position:absolute;cursor:pointer;z-index:100;top:350px;}
+			.arSct p img{width:100%;}
+			.arSct .arS1{left:200px;}
+			.arSct .arS2{right:200px;transform:rotatey(180deg);}
+		/*+++++list++++++*/
+			.wList{width:4760px;height:780px;margin:30px auto 0;padding:10px;
+			position:absolute;left:50%;top:320px;transform:translatex(-50%);}
+			.wList li{width:580px;height:670px;background-color:rgb(255,255,255);border-radius:10px;float:left;
+			box-shadow:2px 2px 5px #aaa;opacity:0.6;transition:all 0.2s linear;margin:0 50px;}
+			.wList .myw{color:#55a;font-weight:999;}
+			.wList li:hover{opacity:1;box-shadow:0 0 10px rgba(212,255,3,1),0 0 30px rgba(255,255,255,1);}
+			/*~~~~~workImg~~~~*/
+				.workImg{width:500px;margin:0 auto;padding:25px 0;}
+				.workImg p{width:100%;height:400px;overflow:hidden;box-shadow:2px 2px 5px #ccc;}
+				.workImg p img{width:100%;height:100%;}
+				.spbar{width:230px;height:3px;margin:10px auto 30px;background-color:rgba(255,150,150,0.5);}
+				.workDesc{text-align:center;padding-bottom:20px;}
+				.workDesc h5{font-size:22px;padding-bottom:20px;color:#f87;cursor:default;}
+				.workDesc p{margin-bottom:5px;color:#777;cursor:default;}
+/* ############ footer ###########*/
+	#footer{width:100%;height:150px;background-color:#000;bottom:0;padding:10px 0;color:#fff;}	
+	/*----------- footer Inner -----------*/
+		#footerInner{width:1200px;display:flex;justify-content:center;margin:30px auto 0;}
+		.ftlogo{width:100px;padding-left:50px;}
+		.ftlogo img{width:100px;float:right;}
+		.ftdesc{padding-left:20px;padding-top:10px;}
+		.ftdesc p{width:450px;height:30px;line-height:40px;text-align:center;}
+/* ############ float 끊기 #########*/
+	#header:after, .codeLdiv:after{display:block;content:"";clear:both;}
+/* ############ 반응형 작업 ##########*/
+/* ############ 애니메이션 ########## */
+	@keyframes discover{
+		0%{opacity:1;}
+		50%{opacity:1;}
+		100%{opacity:0;}
+	}
+	@keyframes introback{
+		0%{background-color:rgba(0,0,0,1);}
+		70%{background-color:rgba(0,0,0,1);}
+		100%{background-color:rgba(0,0,0,0);}
+	}
+	@keyframes intro1{
+		0%{color:rgba(212,255,3,0);right:50%;transform:perspective(0) rotatey(0) translatex(50%);}
+		50%{color:rgba(212,255,3,0.2);right:43%;transform:perspective(50px) rotatey(5deg) translatex(0);}
+		70%{color:rgba(212,255,3,1);right:43%;transform:perspective(50px) rotatey(5deg) translatex(0);}
+		100%{color:rgba(212,255,3,1);right:43%;transform:perspective(50px) rotatey(5deg) translatex(0);}
+	}
+	@keyframes intro2{
+		0%{opacity:0;}
+		70%{opacity:0;}
+		100%{opacity:1;}
+	}
+	@keyframes welbar{
+		0%{box-shadow:0 0 3px rgba(212,255,3,0),0 0 30px rgba(212,255,3,1);background-color:rgba(212,255,3,0.2);}
+		50%{box-shadow:0 0 10px rgba(212,255,3,1),0 0 30px rgba(212,255,3,1);background-color:rgba(255,255,255,0.7);}
+		100%{box-shadow:0 0 3px rgba(212,255,3,0),0 0 30px rgba(212,255,3,1);background-color:rgba(212,255,3,0.2);}
+	}
+	@keyframes spindia1{
+		0%{transform:rotate3d(0,0,1,45deg) translate(200px,-200px);}
+		50%{transform:rotate3d(0,0,1,40deg) translate(200px,-200px);}
+		100%{transform:rotate3d(0,0,1,45deg) translate(200px,-200px);}
+	}
+	@keyframes spindia2{
+		0%{transform:rotate3d(0,0,1,-45deg) translate(200px,200px);}
+		50%{transform:rotate3d(0,0,1,-40deg) translate(200px,200px);}
+		100%{transform:rotate3d(0,0,1,-45deg) translate(200px,200px);}
+	}
